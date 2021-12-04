@@ -1,1 +1,1 @@
-# Blockchain-Smart-Cintract-Vote
+# Blockchain-Smart-Contract-Vote
