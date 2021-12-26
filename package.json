@@ -1,0 +1,36 @@
+{
+  "name": "blockchain-smart-contract-vote",
+  "version": "1.0.0",
+  "description": "Token Governance school project for ECE Paris School of engineering by Amine TSOULI & Akram REKIK",
+  "main": "index.js",
+  "dependencies": {
+    "truffle": "^5.4.26",
+    "truffle-assertions": "^0.9.2",
+    "express": "^4.17.2",
+    "web3": "^1.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "cd truffle && truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmineTs/Blockchain-Smart-Contract-Vote.git"
+  },
+  "keywords": [
+    "Token",
+    "Governance",
+    "Blockchain",
+    "Solidity",
+    "Ethereum",
+    "GETH"
+  ],
+  "author": "Amine TSOULI & Akram REKIK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmineTs/Blockchain-Smart-Contract-Vote/issues"
+  },
+  "homepage": "https://github.com/AmineTs/Blockchain-Smart-Contract-Vote#readme"
+}
