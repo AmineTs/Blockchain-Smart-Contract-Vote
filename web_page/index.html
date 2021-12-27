@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Election Blockchain</title>
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+    <script src="./index.js"></script>    
+  </head>
+ 
+  <body class="container"> 
+    <div id="load">Loading ...</div>
+      <div id="contents">
+        <div id="home">
+          <h1 class="page-header">Election Blockchain</h1>
+          <div class="row">
+            <div>
+              <h3 class="sub-header">Create Scrutin</h3>
+              <form class="form-inline" role="form">
+                <div class="form-group">
+                  <table>
+                    <tr>
+                      <td><label for="createScrutinName">Name of scrutin :</label> </td>
+                      <td>
+                        <input class="form-control" id="createScrutinName" placeholder="Ex : Pizza or Burger ?">
+                      </td>                          
+                    </tr>
+                  </table>
+                <a onclick="createScrutin(); isLoading();" class="btn btn-primary">Create scrutin</a>
+              </form>
+            </div>
+            <div>
+              <h3 class="sub-header">Create Proposal for a Scrutin</h3>
+              <form class="form-inline" role="form">
+                <div class="form-group">
+                  <table>
+                    <tr>
+                      <td><label for="createProposalName">Name of proposal :   </label> </td>
+                      <td>
+                        <input class="form-control" id="createProposalName" placeholder="Ex : Pizza" required>
+                      </td>                          
+                    </tr>
+                  </table>
+              </form>
+            </div>
+            <form class="form-inline" role="form">
+    
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelectScrutin">For scrutin : </label>
+                </div>
+                <select class="custom-select" id="inputGroupSelectScrutin">
+                  <option value="0" selected>Choose...</option>
+                </select>
+              </div> 
+            </form>
+            <a onclick="createProposal(); isLoading();" class="btn btn-primary">Create proposal</a>
+            <h3 class="sub-header">Go to a Scrutin</h3>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupGoToScrutin">Go to scrutin : </label>
+              </div>
+              <select class="custom-select" id="inputGroupGoToScrutin">
+                <option value="0" selected>Choose...</option>
+              </select>
+              <a onclick="goToSrutin()" class="btn btn-primary">Go !</a>
+            </div> 
+          </div>
+        </div>
+        <div id="scrutinPage"> 
+          <div id="scrutinBody">
+            <h1 id="scrutinTitle" class="page-header" style="text-align: center;"></h1>
+            <a class="btn btn-primary">home</a>
+            <div id="cardDeck" class="row row-cols-1 row-cols-md-3 g-4"/>
+          </div>         
+          
+
+        </div>
+      </div>   
+    </div>    
+  </body>
+</html>

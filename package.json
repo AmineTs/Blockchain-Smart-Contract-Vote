@@ -2,18 +2,14 @@
   "name": "blockchain-smart-contract-vote",
   "version": "1.0.0",
   "description": "Token Governance school project for ECE Paris School of engineering by Amine TSOULI & Akram REKIK",
-  "main": "index.js",
+  "main": "web_page",
   "dependencies": {
     "truffle": "^5.4.26",
-    "truffle-assertions": "^0.9.2",
-    "express": "^4.17.2",
-    "web3": "^1.6.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
+    "truffle-assertions": "^0.9.2"
   },
   "scripts": {
-    "test": "cd truffle && truffle test"
+    "test": "docker-compose up -d && npm install && cd truffle && truffle test",
+    "start": "docker-compose up -d && npm install && cd web_page && npm install && npm start"
   },
   "repository": {
     "type": "git",

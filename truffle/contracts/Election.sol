@@ -9,6 +9,7 @@ contract Election {
         address scrutinOwner;
         bool isStarted;
     }
+
     struct Proposition {
         uint256 scrutinId;
         string description;
@@ -16,7 +17,8 @@ contract Election {
     }
 
     Scrutin[] public scrutins;
-    Proposition[] propositions;
+    Proposition[] public propositions;
+    string public errorMessage;
 
     mapping(address => mapping(uint256 => bool)) private isScrutinVoted;
 
@@ -72,11 +74,22 @@ contract Election {
         require(isScrutinVoted[msg.sender][proposition.scrutinId] == false);
 
         proposition.counter++;
+
+        propositions[_propositionId] = proposition;
         isScrutinVoted[msg.sender][proposition.scrutinId] = true;
+
         emit VoteSubmitted(
             proposition.scrutinId,
             _propositionId,
             proposition.counter
         );
+    }
+
+    function getScrutins() public view returns (Scrutin[] memory) {
+        return scrutins;
+    }
+
+    function getProposition() public view returns (Proposition[] memory) {
+        return propositions;
     }
 }
