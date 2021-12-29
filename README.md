@@ -95,7 +95,7 @@ Once the server is launched we can go to the link: http://localhost:3300/
 
 ## Authors
 
-Amine TSOULI & Akram Rekik
+Amine TSOULI & Akram REKIK
 
 amine.tsouli@edu.ece.fr & akram.rekik@edu.ece.fr
 
