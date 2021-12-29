@@ -39,8 +39,8 @@ module.exports = {
       host: 'localhost',
       port: 8545,
       network_id: '*',
-      from: '0x803fc1611bcdb531b06c47bae08948b761ab301b',
-      password: 'pass',
+      from: '0x637a3b679280ecd2e3b8cef562d54a90a1d5da2c',
+      password: '',
       gas: 3000000,
     },
     // Useful for testing. The `development` name is special - truffle uses it by default

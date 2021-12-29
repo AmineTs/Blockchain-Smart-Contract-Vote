@@ -7,11 +7,10 @@ module.exports = function (deployer, network) {
 
   console.log('Deploying contracts');
   console.log('Unlocking account ' + config.from);
-  web3.eth.personal.unlockAccount(config.from, config.password, 36000).then(function () {
-    return deployer
-      .then(function () {
-        return deployer.deploy(Election);
-      })
-      .catch(console.error);
-  });
+  web3.eth.personal.unlockAccount(config.from, config.password, 36000);
+  return deployer
+    .then(function () {
+      return deployer.deploy(Election);
+    })
+    .catch(console.error);
 };
